@@ -172,6 +172,7 @@ async function fetchsearchWeatherInfo(city_name) {
         else {
             userInfoContainer.classList.add("active");
             renderWeatherInfo(data);
+            error.classList.remove("active");
         }
     }
     catch (err) {
@@ -228,6 +229,8 @@ async function fetchsearchWeatherInfo(city_name) {
 //     }
 
 // }
+
+// !addtion of dark mode
 
 var icon = document.querySelector("#icon");
 // var icon = document.getElementById("icon");

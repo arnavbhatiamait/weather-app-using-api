@@ -20,6 +20,11 @@
     --colorGrey1: rgba(0, 0, 0, 0.7);
     --colorplaceholder: white;
 }
+/* body{
+    background-image: linear-gradient(160deg, var(--colorDark1) 0%, var(--colorDark2) 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+} */
 .theme{
     display: flex;
     flex-direction: row;
@@ -36,11 +41,12 @@
 }
 .wrapper{
     width: 100vw;
-    height:100vh;
+    height: 200%;
+    min-height:100vh;
     color: var(--colorLight2);
     /* background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); */
     background-image: linear-gradient(160deg, var(--colorDark1) 0%, var(--colorDark2) 100%);
-
+    padding-bottom: 300px;
 }
 h1{
     text-align: center;
