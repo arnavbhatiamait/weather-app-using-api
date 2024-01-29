@@ -12,6 +12,28 @@
     --colorGrey1: rgba(219,226,239,0.5);
     --colorplaceholder: rgba(255,255,255,0.7);    
 }
+.dark-theme{
+    --colorDark1:rgb(67, 67, 67);
+    --colorDark2:black;
+    --colorLight1:#382bf0;
+    --colorLight2:rgb(21, 220, 21);
+    --colorGrey1: rgba(0, 0, 0, 0.7);
+    --colorplaceholder: white;
+}
+.theme{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin:0;
+    /* margin-top: 40px ; */
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.icon-theme{
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+}
 .wrapper{
     width: 100vw;
     height:100vh;
@@ -23,7 +45,7 @@
 h1{
     text-align: center;
     text-transform: uppercase;
-    padding-top: 20px ;
+    /* padding-top: 10px ; */
 }
 .tab-container{
     width:90%;
