@@ -1,0 +1,242 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3f72af;
+    --colorLight1:#DBE2EF;
+    --colorLight2:#F9F7F7;
+    --colorGrey1: rgba(219,226,239,0.5);
+    --colorplaceholder: rgba(255,255,255,0.7);    
+}
+.wrapper{
+    width: 100vw;
+    height:100vh;
+    color: var(--colorLight2);
+    /* background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); */
+    background-image: linear-gradient(160deg, var(--colorDark1) 0%, var(--colorDark2) 100%);
+
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px ;
+}
+.tab-container{
+    width:90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;   
+    padding: 5px 8px;
+}
+.tab.current-tab{
+    /* background-color: rgba(219,226,239,0.5); */
+    background-color: var(--colorGrey1);
+    border-radius: 4px;
+
+}
+/* !makes the whole ui to contract */
+/* .weather-conatainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+} */
+.weather-conatainer{
+    margin-block: 4rem;
+}
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: var(--colorLight2);
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;   
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grant-location-conatiner{
+    display: none;
+}
+.grant-location-conatiner.active{
+    display: flex;
+}
+.grant-location-conatiner img{
+    margin-bottom: 2rem;
+}
+.grant-location-conatiner p:first-of-type{
+ font-size: 1.75rem;   
+ font-weight: 600;
+}
+.grant-location-conatiner p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    text-transform: uppercase;
+}
+.user-info-conatiner{
+    display: none ;   
+}
+.user-info-conatiner.active{
+    display: flex;
+}
+.user-info-conatiner p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.user-info-conatiner img{
+    width: 90px;
+    height: 90px;
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.name p{
+    font-size: 2rem;
+}
+.name img{
+    width: 30px;
+    height: 30px;   
+}
+.user-info-conatiner p[data-temp]{
+    font-size:2.75rem  ;
+    font-weight: 700;
+}
+.parameter-conatiner{
+    width: 90%;
+    display: flex;
+    gap: 10px 20px ;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    /* background-color: rgba(219,226,239,0.5); */
+    background-color: var(--colorGrey1);
+    display: flex;
+    border-radius: 5px;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+.parameter P:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: var(--colorGrey1);
+    border-radius: 10px;
+    align-items: space-between;
+}
+.form-container input::placeholder{
+    color:var(--colorplaceholder);
+}
+.form-container input:focus{
+    outline: 3px solid var(--colorplaceholder);
+}
+.form-container .btn{
+    /* margin-top: 10px; */
+    margin-bottom: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: unset;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+
+}
+
+.error{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error.active{
+    display: flex;
+}
+.error img{
+    width: 60%;
+    max-width: 300px;
+}
+.error p{
+    font-size: 1rem ;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* .tab.current-tab{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 4px;
+}
+.form-container.active{
+    scale: 1;
+    opacity: 1;
+    display: flex;
+} */
+@media (max-width:500px) {
+    .parameter-conatiner{
+        display: flex;
+        flex-direction: column;
+    }
+    .parameter{
+        width: 200px;
+        max-width: 100%;
+    }
+}
