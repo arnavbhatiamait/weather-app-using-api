@@ -11,6 +11,41 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./weather-icon.png">
+    <style>
+        body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #922323, #383838);
+      color: white;
+      transition: background 0.3s;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    body.dark-mode {
+      background: linear-gradient(to bottom, #52c0f3, #54f1a8);
+      color: black;
+    }
+
+    /* Moving Cloud Background */
+    .wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background: url('https://www.freeiconspng.com/thumbs/rain-png/rain-clouds-png-27.png') repeat-x;
+      background-size: contain;
+      animation: moveClouds 60s linear infinite;
+      opacity: 0.15;
+      z-index: -1;
+    }
+    </style>
     <title>WEATHER APP</title>
 </head>
 
